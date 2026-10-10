@@ -4,7 +4,6 @@ backend:
   branch: main
   auth_type: pkce
   app_id: Ov23li2tHSXSnjXbBz7t
-  base_url: https://haldenconsulting.co.ke
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
