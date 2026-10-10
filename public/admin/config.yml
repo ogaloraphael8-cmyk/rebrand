@@ -1,40 +1,26 @@
 backend:
-  name: github
-  repo: ogaloraphael8-cmyk/rebrand-sync-app
+  name: git-gateway
   branch: main
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-    - name: "news"
-    label: "News"
-    folder: "src/content/news"
+    - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Date", name: "date", widget: "datetime"}
-            - {label: "Image", name: "image", widget: "image", required: false}
-            - {label: "Body", name: "body", widget: "markdown"}
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Publish Date", name: "date", widget: "datetime" }
+            - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+            - { label: "Body", name: "body", widget: "markdown" }
 
-    - name: "blogs"
-    label: "Blogs"
-    folder: "src/content/blogs"
-    create: true
-    slug: "{{slug}}"
-    fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Author", name: "author", widget: "string", default: "Halden Consulting"}
-            - {label: "Date", name: "date", widget: "datetime"}
-            - {label: "Featured Image", name: "image", widget: "image"}
-            - {label: "Body", name: "body", widget: "markdown"}
-
-    - name: "gallery"
-    label: "Gallery"
-    folder: "src/content/gallery"
+    - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
     create: true
     fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Image", name: "image", widget: "image"}
-            - {label: "Caption", name: "caption", widget: "string", required: false}
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Body", name: "body", widget: "markdown" }
